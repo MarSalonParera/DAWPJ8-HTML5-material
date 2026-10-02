@@ -2,60 +2,32 @@
 <html lang="ca">
 
 <head>
-    <meta charset="utf-8" />
-    <title>DAW2</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="sergi.grau@fje.edu" />
-    <link rel="stylesheet" type="text/css" href="css/estils.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
-
 <body>
-    <header>
-        <h1>HTML5 Semàntic</h1>
-        <h2>Subtitle</h2>
-    </header>
 
-    <div id="container">
-        <nav aria-label="Principal">
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
-        </nav>
-        <main>
-            <section>
-                <article>
-                    <header>
-                        <h2>Article Header</h2>
-                    </header>
-                    <p>Lorem ipsum dolor HTML5 nunc aut nunquam sit amet, consectetur adipiscing elit. Vivamus at est eros, vel fringilla urna.</p>
-                    <p>Per inceptos himenaeos. Quisque feugiat, justo at vehicula pellentesque, turpis lorem dictum nunc.</p>
-                    <footer>
-                        <p>Article Footer</p>
-                    </footer>
-                </article>
-                <article>
-                    <header>
-                        <h2>Article Header</h2>
-                    </header>
-                    <p>HTML5: "Lorem ipsum dolor nunc aut nunquam sit amet, consectetur adipiscing elit. Vivamus at est eros, vel fringilla urna. Pellentesque odio</p>
-                    <footer>
-                        <p>Article Footer</p>
-                    </footer>
-                </article>
-            </section>
-        </main>
+    <input type="range" id="r" min="0" max="255" value="0"><br>
+    <input type="range" id="g" min="0" max="255" value="0"><br>
+    <input type="range" id="b" min="0" max="255" value="0"><br>
 
-        <aside>
-            <h3>Aside</h3>
-            <p>HTML5: "Lorem ipsum dolor nunc aut nunquam sit amet, consectetur adipiscing elit. Vivamus at est eros, vel fringilla urna. Pellentesque odio rhoncus</p>
-        </aside>
-        <footer>
-            <p>Footer</p>
-        </footer>
-    </div>
+    <script>
+
+        function canviarColor() {
+            let vermell = document.getElementById('r').value;
+            console.log(vermell);
+            let verd = document.getElementById('g').value;
+            console.log(verd);
+            let blau = document.getElementById('b').value;
+            console.log(blau);
+            document.body.style.backgroundColor = `rgb(${vermell},${verd}, ${blau})`;
+        }
+        document.getElementById('r').addEventListener('change', canviarColor);
+        document.getElementById('g').addEventListener('change', canviarColor);
+        document.getElementById('b').addEventListener('change', canviarColor);
+    </script>
 </body>
 
 </html>
